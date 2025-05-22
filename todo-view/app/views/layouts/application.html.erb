@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application' %>
+  </head>
+  <body>
+    <header>
+      <h1>Todo Application</h1>
+      <div>
+        <%= time_greeting %><br>
+        <%= last_visited_ago %><br>
+        Total visits: <%= total_visits %><br>
+        This page visits: <%= page_visits["{controller_name}##{action_name}"] || 0 %>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <!-- Footer content if needed -->
+    </footer>
+  </body>
+</html>
